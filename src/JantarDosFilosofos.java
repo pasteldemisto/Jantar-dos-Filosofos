@@ -36,7 +36,7 @@ void main() {
 
         // Cria uma thread para cada filósofo, cada um com os seus respectivos while.
         // Como todos vão usar os mesmos 5 objetos garfos, o synchronized vai bloquear o uso enquanto um filósofo já estiver usando.
-        // Lembrando que cada filósofo usa os dois garfo entre 0 e 2 segundos. Se eles pegam um garfo e não pegam o outro, eles largam o garfo.
+        // Lembrando que cada filósofo usa os dois garfo entre 0 e 2 segundos. Se eles pegam um garfo e não pegam o outro, eles esperam o segundo garfo.
         // É importante notar que a thread continua a rodar mesmo após sair do for, por causa do while de cada filósofo.
         new Thread(philosophers[i]).start();
     }
