@@ -51,7 +51,7 @@ public class Philosopher implements Runnable{
                     }
                 }
 
-                // Aqui eu coloquei um limite de 5 vezes para ele comer, só pra não rodar infinitamente e poder analisar depois.
+                // Aqui eu coloquei um limite de 5 vezes para comerem, só pra não rodar infinitamente e poder analisar depois.
                 if (hunger == 5){
                     System.out.printf("%s já comeu suficiente! *Saiu da mesa*\n", this.name);
                     return;
