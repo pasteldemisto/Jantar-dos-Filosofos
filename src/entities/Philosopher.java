@@ -42,8 +42,7 @@ public class Philosopher implements Runnable{
                 synchronized (leftFork){
                     System.out.printf("Filósofo %s pegou o garfo esquerdo %d com êxito!\n", this.name, this.leftFork.getId());
 
-                    // Se ele consegue pegar um garfo, então ele tenta pegar outro garfo para comer.
-                    // Se não conseguir pegar, ele volta pro while true para pensar e depois tentar pegar novamente.
+                    // Se ele consegue pegar um garfo, então espera outra thread liberar o garfo para pegar e comer.
                     synchronized (rightFork){
                         System.out.printf("Filósofo %s pegou o garfo direito %d com êxito!\n", this.name, this.rightFork.getId());
                         eating();
